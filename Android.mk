@@ -9,7 +9,7 @@ LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter -Wno-deprecated-declarations
 # LOG_LEVEL 0=off, 1=error, 2=warning, 3=info, 4=debug
 LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"libiio\"
 LOCAL_CFLAGS += -Wno-deprecated-declarations
-LOCAL_SHARED_LIBRARIES += liblog
+LOCAL_SHARED_LIBRARIES += liblog libcutils
 
 LOCAL_CFLAGS += -fvisibility=hidden
 LOCAL_CFLAGS += -DHAVE_IPV6=1
@@ -41,6 +41,8 @@ ifdef LIBIIO_USE_NETWORK
 endif
 
 LOCAL_EXPORT_C_INCLUDES = iio.h
+
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
