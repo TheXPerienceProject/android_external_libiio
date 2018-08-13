@@ -1336,7 +1336,7 @@ static int foreach_in_dir(void *d, const char *path, bool is_dir,
 	while (true) {
 		struct stat st;
 		char buf[1024];
-		int ret = readdir(dir, entry, &result);
+		int ret = readdir_r(dir, entry, &result);
 		if (ret) {
 			iio_strerror(ret, buf, sizeof(buf));
 			ERROR("Unable to open directory %s: %s\n", path, buf);

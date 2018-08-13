@@ -8,6 +8,7 @@ LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 
 # LOG_LEVEL 0=off, 1=error, 2=warning, 3=info, 4=debug
 LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"libiio\"
+LOCAL_CFLAGS += -Wno-deprecated-declarations
 LOCAL_SHARED_LIBRARIES += liblog
 
 LOCAL_CFLAGS += -fvisibility=hidden
@@ -90,4 +91,3 @@ LOCAL_SRC_FILES := tests/iio_reg.c
 LOCAL_SHARED_LIBRARIES := libiio
 
 include $(BUILD_EXECUTABLE)
-
