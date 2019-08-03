@@ -55,7 +55,7 @@ LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_genxml.c
 LOCAL_SHARED_LIBRARIES := libiio
-
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_EXECUTABLE)
 
 ################################################################################
@@ -67,7 +67,7 @@ LOCAL_CFLAGS += -Wall -Wextra
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_info.c
 LOCAL_SHARED_LIBRARIES := libiio
-
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_EXECUTABLE)
 
 ################################################################################
@@ -79,7 +79,7 @@ LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_readdev.c
 LOCAL_SHARED_LIBRARIES := libiio
-
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_EXECUTABLE)
 
 ################################################################################
@@ -91,5 +91,5 @@ LOCAL_CFLAGS += -Wall -Wextra
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_reg.c
 LOCAL_SHARED_LIBRARIES := libiio
-
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_EXECUTABLE)
