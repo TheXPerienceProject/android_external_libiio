@@ -10,7 +10,7 @@ LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter -Wno-deprecated-declarations
 LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"libiio\"
 LOCAL_CFLAGS += -Wno-deprecated-declarations
 LOCAL_SHARED_LIBRARIES += liblog libcutils
-
+LOCAL_HEADER_LIBRARIES := libutils_headers libhardware_headers
 LOCAL_CFLAGS += -fvisibility=hidden
 LOCAL_CFLAGS += -DHAVE_IPV6=1
 LOCAL_CFLAGS += -D_GNU_SOURCE=1
